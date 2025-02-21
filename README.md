@@ -1,21 +1,13 @@
-#Installation & Usage
+## Installation & Usage
 
-Clone the repository:
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/TyperX.git
 
-git clone https://github.com/yourusername/TyperX.git
+2. **Navigate to the project directory:**
+   ```bash
+    cd TyperX
 
-Navigate to the project directory:
-
-cd TyperX
-
-Build and run the project:
-
-dotnet run
-
-Contributing
-
-Contributions are welcome! Feel free to fork the repository, submit issues, or create pull requests.
-
-License
-
-This project is licensed under the MIT License.
+3. **Build and run the project:**
+    ```bash
+    dotnet run
