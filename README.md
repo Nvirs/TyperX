@@ -1,3 +1,39 @@
+# TyperX
+
+TyperX is a cross-platform typing speed test application built with the Avalonia UI framework. 
+## Features
+
+- **30-Second Typing Test**  
+  
+- **Real-Time Feedback**  
+  Receive immediate feedback on each word:
+  - **Correct:** The word is accepted.
+  - **Incorrect:** The word is flagged as wrong.
+
+- **Results Display**  
+  After the test, view your:
+  - **WPM (Words Per Minute)**
+  - **Accuracy Percentage**
+
+## How It Works
+
+1. **Start the Test:**  
+   Click the **Start** button to begin the test.
+
+2. **Type the Words:**  
+   Type the words displayed and press **Enter** to submit each word.
+
+3. **Timer:**  
+   The timer counts down from 30 seconds, updating every 100 milliseconds.
+
+4. **Test Completion:**  
+   The test ends when:
+   - The 30-second timer runs out, or
+   - All words have been typed.
+
+5. **Results:**  
+   At the end of the test, your WPM and accuracy are calculated and displayed.
+   
 ## Installation & Usage
 
 1. **Clone the Repository:**
