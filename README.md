@@ -34,7 +34,7 @@ TyperX is a cross-platform typing speed test application built with the Avalonia
 5. **Results:**  
    At the end of the test, your WPM and accuracy are calculated and displayed.
 
-   ## avalonia ui
+   ## Avalonia ui
 
 avalonia ui is a modern, cross-platform ui framework for .NET, inspired by wpf. Highly responsive desktop, mobile, and web applications using xaml-based design.
 
