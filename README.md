@@ -1,4 +1,4 @@
-# TyperX
+# TyperX 
 
 TyperX is a cross-platform typing speed test application built with the Avalonia UI framework. 
 ## Features
@@ -24,7 +24,7 @@ TyperX is a cross-platform typing speed test application built with the Avalonia
    Type the words displayed and press **Enter** to submit each word.
 
 3. **Timer:**  
-   The timer counts down from 30 seconds, updating every 100 milliseconds.
+   The timer counts down from 30 seconds
 
 4. **Test Completion:**  
    The test ends when:
@@ -33,7 +33,23 @@ TyperX is a cross-platform typing speed test application built with the Avalonia
 
 5. **Results:**  
    At the end of the test, your WPM and accuracy are calculated and displayed.
-   
+
+   ## avalonia ui
+
+avalonia ui is a modern, cross-platform ui framework for .NET, inspired by wpf. Highly responsive desktop, mobile, and web applications using xaml-based design.
+
+- **cross-platform support:**  
+  runs on windows, macos, and linux.
+  
+- **modern architecture:**  
+  built around the mvvm design pattern, separating business logic from the user interface.
+
+- **customizable & themable:**  
+  offers flexible styling options to create unique user experiences.
+
+- **open source:**  
+  maintained by a vibrant community with active development and support.
+
 ## Installation & Usage
 
 1. **Clone the Repository:**
