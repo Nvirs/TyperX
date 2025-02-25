@@ -54,7 +54,7 @@ avalonia ui is a modern, cross-platform ui framework for .NET, inspired by wpf. 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/TyperX.git
+   git clone https://github.com/Nvirs/TyperX.git
 
 2. **Navigate to the project directory:**
    ```bash
