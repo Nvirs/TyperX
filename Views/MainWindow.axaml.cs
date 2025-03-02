@@ -6,6 +6,7 @@ namespace TyperX.Views
 {
     public partial class MainWindow : Window
     {
+        //Main window application 
         public MainWindow()
         {
             InitializeComponent();
