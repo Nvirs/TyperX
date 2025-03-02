@@ -29,7 +29,7 @@ namespace TyperX.ViewModels
 
         // AvaloniaProperty-k a bindinghoz
         public static readonly StyledProperty<string> TimeLeftProperty =
-            AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(TimeLeft), "Time left: 30 sec");
+            AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(TimeLeft), "Rendelkezésre álló idő: 30 sec");
 
         public static readonly StyledProperty<string> CurrentWordProperty =
             AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(CurrentWord), "Press Start!");
@@ -172,12 +172,12 @@ namespace TyperX.ViewModels
             double wpm = correctWords / (stopwatch.Elapsed.TotalMinutes);
             double accuracy = (double)correctWords / totalWords * 100;
             Result = $"WPM: {wpm:0.0} | Pontosság: {accuracy:0}% | Helyes: {correctWords}/{totalWords}";
-            CurrentWord = "Kész!";
+            CurrentWord = "Vége!";
             Feedback = "";
         }
     }
 
-    // Egyszerű ICommand implementáció
+    
     public class DelegateCommand : ICommand
     {
         private readonly Action _execute;
