@@ -11,12 +11,28 @@ namespace TyperX.ViewModels
 {
     public class MainWindowViewModel : AvaloniaObject
     {
+        
+        private static readonly string[] words = new string[]
+        {
+            "cat", "dog", "bat", "rat", "hat", "mat", "pen", "cup", "box", "fox",
+            "jam", "ham", "ram", "yam", "zip", "dip", "lip", "sip", "top", "pop",
+            "bug", "rug", "hug", "mug", "fun", "run", "sun", "bun", "pin", "win",
+            "car", "bar", "far", "tar", "red", "bed", "fed", "led", "sad", "mad",
+            "toy", "boy", "joy", "soy", "cow", "bow", "row", "mow", "tap", "nap",
+            "egg", "leg", "peg", "beg", "big", "dig", "fig", "pig", "fit", "hit",
+            "ice", "ace", "pie", "tie", "zoo", "boo", "goo", "moo", "zap", "cap",
+            "nut", "cut", "gut", "hut", "bet", "get", "let", "met", "set", "wet",
+            "dot", "hot", "lot", "pot", "add", "bad", "dad", "had", "pad", "sad",
+            "house","brave","google","firefox","librefox","mouse","keyboard","lose","win",
+            "number","binary","hexa","visual","code","visualstudio"
+        };
+
         // AvaloniaProperty-k a bindinghoz
         public static readonly StyledProperty<string> TimeLeftProperty =
-            AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(TimeLeft), "Hátralévő idő: 30 mp");
+            AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(TimeLeft), "Time left: 30 sec");
 
         public static readonly StyledProperty<string> CurrentWordProperty =
-            AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(CurrentWord), "Nyomj Startot!");
+            AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(CurrentWord), "Press Start!");
 
         public static readonly StyledProperty<string> UserInputProperty =
             AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(UserInput), "");
@@ -27,7 +43,7 @@ namespace TyperX.ViewModels
         public static readonly StyledProperty<string> ResultProperty =
             AvaloniaProperty.Register<MainWindowViewModel, string>(nameof(Result), "");
 
-        // Tulajdonságok getter/setter
+
         public string TimeLeft
         {
             get => GetValue(TimeLeftProperty);
@@ -59,7 +75,6 @@ namespace TyperX.ViewModels
         }
 
         // Mezők
-        private string[] words = { "alma", "malac", "programozas", "technologia", "kukoricajancsi", "csharp", "haz","hotel","gomba"};
         private Random rand = new Random();
         private List<string> testWords = new List<string>();
         private int currentIndex = 0;
@@ -90,6 +105,7 @@ namespace TyperX.ViewModels
             Result = "";
             Feedback = "";
 
+            //random kivalaszthato szavak for ciklusa 20ig 
             for (int i = 0; i < 20; i++)
             {
                 testWords.Add(words[rand.Next(words.Length)]);
@@ -109,7 +125,7 @@ namespace TyperX.ViewModels
             }
             else
             {
-                TimeLeft = $"Hátralévő idő: {(30 - stopwatch.Elapsed.TotalSeconds):0} mp";
+                TimeLeft = $"Hátralévő idő: {(30 - stopwatch.Elapsed.TotalSeconds):0} sec";
             }
         }
 
@@ -129,11 +145,11 @@ namespace TyperX.ViewModels
             if (UserInput == testWords[currentIndex])
             {
                 correctWords++;
-                Feedback = "Jó!";
+                Feedback = "Jó! ✅";
             }
             else
             {
-                Feedback = "Hiba!";
+                Feedback = "Hiba! ❌";
             }
 
             currentIndex++;
@@ -156,7 +172,7 @@ namespace TyperX.ViewModels
             double wpm = correctWords / (stopwatch.Elapsed.TotalMinutes);
             double accuracy = (double)correctWords / totalWords * 100;
             Result = $"WPM: {wpm:0.0} | Pontosság: {accuracy:0}% | Helyes: {correctWords}/{totalWords}";
-            CurrentWord = "Vége!";
+            CurrentWord = "Kész!";
             Feedback = "";
         }
     }
