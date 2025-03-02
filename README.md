@@ -1,4 +1,4 @@
-# Typerx
+# TyperX
 
 Typerx is a typing speed test app made with the Avalonia UI framework.
 
