@@ -3,7 +3,7 @@
         xmlns:vm="using:TyperX.ViewModels"
         x:Class="TyperX.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Title="Typer - Gépelj gyorsabban!"
+        Title="TyperX - Gépelj gyorsabban!"
         Width="400" Height="300">
     <Design.DataContext>
         <vm:MainWindowViewModel/>
