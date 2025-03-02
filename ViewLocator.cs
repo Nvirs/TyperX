@@ -4,10 +4,9 @@ using Avalonia.Controls.Templates;
 using TyperX.ViewModels;
 
 namespace TyperX;
-
+//View model logic
 public class ViewLocator : IDataTemplate
 {
-
     public Control? Build(object? param)
     {
         if (param is null)
